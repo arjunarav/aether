@@ -298,7 +298,7 @@ export default function AetherHome() {
       <section id="main-feed" className="main-feed">
         <header className="topbar">
           <div className="topbar-content">
-            <p className="eyebrow hero-eyebrow">Welcome back, Akash.</p>
+            <p className="eyebrow hero-eyebrow">Welcome back.</p>
             <h1>Here is what Aether thinks about your week.</h1>
           </div>
           <div className="hero-chaos-card">
