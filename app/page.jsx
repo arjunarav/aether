@@ -80,17 +80,13 @@ export default function AetherHome() {
   const [activePrompt, setActivePrompt] = useState('quiet-problem');
   const [consoleEntries, setConsoleEntries] = useState([]);
   const [consoleFilter, setConsoleFilter] = useState('all');
-  const [consoleOpen, setConsoleOpen] = useState(true);
+  const [consoleOpen, setConsoleOpen] = useState(false);
   const [sourcePanel, setSourcePanel] = useState(null);
   const [phase, setPhase] = useState('Connecting to sources...');
   const [readStage, setReadStage] = useState('idle');
   const [loading, setLoading] = useState(true);
   const [thinking, setThinking] = useState(false);
   const answerRef = useRef(null);
-
-  useEffect(() => {
-    if (window.innerWidth < 1180) setConsoleOpen(false);
-  }, []);
 
   useEffect(() => {
     let mounted = true;
