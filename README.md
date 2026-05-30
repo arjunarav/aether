@@ -4,6 +4,28 @@
 
 Aether turns fragmented life signals into one reasoning surface. It brings together calendar load, communication patterns, goals, relationship drift, and recovery signals so you can see what is quietly becoming a problem before it compounds.
 
+## Product Tour
+
+### Chaos Timeline
+
+![Chaos Timeline](public/readme/chaos-timeline.png)
+
+### Relationship Heatmap
+
+![Relationship Heatmap](public/readme/relationship-heatmap.png)
+
+### Regret Projection
+
+![Regret Projection](public/readme/regret-projection.png)
+
+### Ask Aether
+
+![Ask Aether](public/readme/ask-aether.png)
+
+### Cross-Source Diagnostics
+
+![Cross-Source Diagnostics](public/readme/cross-source-diagnostics.png)
+
 ## What It Does
 
 - Builds a living context graph across people, meetings, goals, and health signals
