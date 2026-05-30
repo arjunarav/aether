@@ -1,0 +1,22 @@
+[
+  { "id": "cal_001", "title": "Coral source sync", "date": "2026-05-25", "start": "2026-05-25T09:00:00+05:30", "end": "2026-05-25T09:45:00+05:30", "attendees": ["Dev Kapoor"], "type": "meeting" },
+  { "id": "cal_002", "title": "Focus: Aether graph model", "date": "2026-05-25", "start": "2026-05-25T10:30:00+05:30", "end": "2026-05-25T12:00:00+05:30", "attendees": [], "type": "focus" },
+  { "id": "cal_003", "title": "Investor intro prep", "date": "2026-05-26", "start": "2026-05-26T11:00:00+05:30", "end": "2026-05-26T11:45:00+05:30", "attendees": ["Isha Mehta"], "type": "meeting" },
+  { "id": "cal_004", "title": "Dentist hold", "date": "2026-05-26", "start": "2026-05-26T18:30:00+05:30", "end": "2026-05-26T19:00:00+05:30", "attendees": [], "type": "personal" },
+  { "id": "cal_005", "title": "Product story critique", "date": "2026-05-27", "start": "2026-05-27T09:30:00+05:30", "end": "2026-05-27T10:15:00+05:30", "attendees": ["Maya Chen"], "type": "meeting" },
+  { "id": "cal_006", "title": "Focus: backend routes", "date": "2026-05-27", "start": "2026-05-27T14:00:00+05:30", "end": "2026-05-27T15:30:00+05:30", "attendees": [], "type": "focus" },
+  { "id": "cal_007", "title": "Standup", "date": "2026-05-28", "start": "2026-05-28T09:00:00+05:30", "end": "2026-05-28T09:30:00+05:30", "attendees": ["Dev Kapoor"], "type": "meeting" },
+  { "id": "cal_008", "title": "Coral schema review", "date": "2026-05-28", "start": "2026-05-28T10:00:00+05:30", "end": "2026-05-28T11:00:00+05:30", "attendees": ["Dev Kapoor"], "type": "meeting" },
+  { "id": "cal_009", "title": "LabBase reference decision", "date": "2026-05-28", "start": "2026-05-28T11:30:00+05:30", "end": "2026-05-28T12:00:00+05:30", "attendees": [], "type": "meeting" },
+  { "id": "cal_010", "title": "Design pass", "date": "2026-05-28", "start": "2026-05-28T13:00:00+05:30", "end": "2026-05-28T14:00:00+05:30", "attendees": [], "type": "meeting" },
+  { "id": "cal_011", "title": "Low-priority standup", "date": "2026-05-28", "start": "2026-05-28T15:00:00+05:30", "end": "2026-05-28T15:30:00+05:30", "attendees": ["Ops Pod"], "type": "meeting" },
+  { "id": "cal_012", "title": "Product rehearsal", "date": "2026-05-28", "start": "2026-05-28T16:00:00+05:30", "end": "2026-05-28T17:00:00+05:30", "attendees": ["Coral Hack Team"], "type": "meeting" },
+  { "id": "cal_013", "title": "Submission buffer", "date": "2026-05-29", "start": "2026-05-29T09:00:00+05:30", "end": "2026-05-29T09:45:00+05:30", "attendees": [], "type": "meeting" },
+  { "id": "cal_014", "title": "Gmail OAuth check", "date": "2026-05-29", "start": "2026-05-29T10:00:00+05:30", "end": "2026-05-29T10:30:00+05:30", "attendees": ["Dev Kapoor"], "type": "meeting" },
+  { "id": "cal_015", "title": "Notion workspace sync", "date": "2026-05-29", "start": "2026-05-29T11:00:00+05:30", "end": "2026-05-29T11:45:00+05:30", "attendees": [], "type": "meeting" },
+  { "id": "cal_016", "title": "Judge dry run", "date": "2026-05-29", "start": "2026-05-29T13:00:00+05:30", "end": "2026-05-29T14:00:00+05:30", "attendees": ["Maya Chen"], "type": "meeting" },
+  { "id": "cal_017", "title": "Final polish", "date": "2026-05-29", "start": "2026-05-29T15:00:00+05:30", "end": "2026-05-29T16:00:00+05:30", "attendees": [], "type": "meeting" },
+  { "id": "cal_018", "title": "Hackathon review", "date": "2026-05-29", "start": "2026-05-29T18:00:00+05:30", "end": "2026-05-29T18:15:00+05:30", "attendees": ["Coral Hack Team"], "type": "meeting" },
+  { "id": "cal_019", "title": "Recovery block", "date": "2026-05-30", "start": "2026-05-30T10:00:00+05:30", "end": "2026-05-30T11:30:00+05:30", "attendees": [], "type": "focus" },
+  { "id": "cal_020", "title": "Family call", "date": "2026-05-31", "start": "2026-05-31T19:00:00+05:30", "end": "2026-05-31T19:30:00+05:30", "attendees": ["Mom"], "type": "personal" }
+]

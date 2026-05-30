@@ -1,0 +1,62 @@
+[
+  {
+    "id": "c_maya",
+    "name": "Maya Chen",
+    "email": "maya.chen@example.com",
+    "role": "Mentor",
+    "relationship_score": 88,
+    "baseline_score": 91,
+    "importance": "high",
+    "last_meaningful_context": "She offered to review the Coral product narrative before judging."
+  },
+  {
+    "id": "c_vikram",
+    "name": "Vikram Nair",
+    "email": "vikram.nair@example.com",
+    "role": "Reference",
+    "relationship_score": 41,
+    "baseline_score": 78,
+    "importance": "high",
+    "last_meaningful_context": "He helped with the LabBase application in February and offered a reference."
+  },
+  {
+    "id": "c_amara",
+    "name": "Amara Rao",
+    "email": "amara.rao@example.com",
+    "role": "Close friend",
+    "relationship_score": 57,
+    "baseline_score": 75,
+    "importance": "medium",
+    "last_meaningful_context": "You said you would call after her design review."
+  },
+  {
+    "id": "c_dev",
+    "name": "Dev Kapoor",
+    "email": "dev.kapoor@example.com",
+    "role": "Collaborator",
+    "relationship_score": 64,
+    "baseline_score": 68,
+    "importance": "medium",
+    "last_meaningful_context": "He is waiting for API shape before wiring the Coral flow."
+  },
+  {
+    "id": "c_mom",
+    "name": "Mom",
+    "email": "mom@example.com",
+    "role": "Family",
+    "relationship_score": 52,
+    "baseline_score": 82,
+    "importance": "high",
+    "last_meaningful_context": "She sent a voice note about the cardiology appointment and got a one-word reply."
+  },
+  {
+    "id": "c_isha",
+    "name": "Isha Mehta",
+    "email": "isha.mehta@example.com",
+    "role": "Investor intro",
+    "relationship_score": 73,
+    "baseline_score": 74,
+    "importance": "medium",
+    "last_meaningful_context": "She asked for a two-line update after the prototype."
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "goal_orion",
+    "title": "Project Orion",
+    "status": "in_progress",
+    "last_edited": "2026-04-09",
+    "priority": "high",
+    "owner": "you",
+    "next_action": "Write the one-page benchmark memo before final reviews."
+  },
+  {
+    "id": "goal_aether",
+    "title": "Aether hackathon MVP",
+    "status": "in_progress",
+    "last_edited": "2026-05-29",
+    "priority": "high",
+    "owner": "you",
+    "next_action": "Ship the Coral console and regret graph."
+  },
+  {
+    "id": "goal_health",
+    "title": "Sleep reset",
+    "status": "in_progress",
+    "last_edited": "2026-05-18",
+    "priority": "medium",
+    "owner": "you",
+    "next_action": "Lights out before midnight twice this week."
+  },
+  {
+    "id": "goal_founder",
+    "title": "Founder update loop",
+    "status": "blocked",
+    "last_edited": "2026-05-12",
+    "priority": "medium",
+    "owner": "you",
+    "next_action": "Send Isha two lines after prototype review."
+  },
+  {
+    "id": "goal_finance",
+    "title": "Trim passive subscriptions",
+    "status": "in_progress",
+    "last_edited": "2026-05-03",
+    "priority": "low",
+    "owner": "you",
+    "next_action": "Cancel unused meditation and gym plan if no workout by June 2."
+  }
+]

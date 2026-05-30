@@ -1,0 +1,79 @@
+[
+  {
+    "id": "e_001",
+    "subject": "Coral product flow review",
+    "sender": "Maya Chen",
+    "sender_email": "maya.chen@example.com",
+    "recipient_email": "you@example.com",
+    "date": "2026-05-11",
+    "importance": "high",
+    "replied": false,
+    "snippet": "Happy to look at the judging narrative if you send it over today."
+  },
+  {
+    "id": "e_002",
+    "subject": "Reference if useful",
+    "sender": "Vikram Nair",
+    "sender_email": "vikram.nair@example.com",
+    "recipient_email": "you@example.com",
+    "date": "2026-05-06",
+    "importance": "high",
+    "replied": false,
+    "snippet": "Let me know if you need a reference. I can send something this week."
+  },
+  {
+    "id": "e_003",
+    "subject": "API contracts for Coral",
+    "sender": "Dev Kapoor",
+    "sender_email": "dev.kapoor@example.com",
+    "recipient_email": "you@example.com",
+    "date": "2026-05-28",
+    "importance": "high",
+    "replied": true,
+    "snippet": "Can you freeze the route names before I wire the visualizer?"
+  },
+  {
+    "id": "e_004",
+    "subject": "Tonight's family plan",
+    "sender": "Mom",
+    "sender_email": "mom@example.com",
+    "recipient_email": "you@example.com",
+    "date": "2026-05-20",
+    "importance": "medium",
+    "replied": true,
+    "snippet": "Just checking whether you can call before the appointment."
+  },
+  {
+    "id": "e_005",
+    "subject": "Two-line founder update?",
+    "sender": "Isha Mehta",
+    "sender_email": "isha.mehta@example.com",
+    "recipient_email": "you@example.com",
+    "date": "2026-05-26",
+    "importance": "medium",
+    "replied": false,
+    "snippet": "No deck needed. Just send what changed since the last prototype."
+  },
+  {
+    "id": "e_006",
+    "subject": "Invoice reminder",
+    "sender": "Studio Ledger",
+    "sender_email": "billing@studioledger.example",
+    "recipient_email": "you@example.com",
+    "date": "2026-05-27",
+    "importance": "low",
+    "replied": false,
+    "snippet": "Your May invoice is due next week."
+  },
+  {
+    "id": "e_007",
+    "subject": "Hackathon logistics",
+    "sender": "Coral Hack Team",
+    "sender_email": "events@coral.example",
+    "recipient_email": "you@example.com",
+    "date": "2026-05-29",
+    "importance": "high",
+    "replied": false,
+    "snippet": "Final reviews begin at 6pm. Please submit your app URL by 5:15pm."
+  }
+]

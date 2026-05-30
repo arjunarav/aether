@@ -1,0 +1,10 @@
+[
+  { "id": "loc_001", "place": "Home", "arrival": "2026-05-25T19:20:00+05:30", "departure": "2026-05-26T08:20:00+05:30", "category": "home" },
+  { "id": "loc_002", "place": "WeWork Indiranagar", "arrival": "2026-05-26T09:00:00+05:30", "departure": "2026-05-26T19:40:00+05:30", "category": "work" },
+  { "id": "loc_003", "place": "Home", "arrival": "2026-05-26T20:18:00+05:30", "departure": "2026-05-27T08:45:00+05:30", "category": "home" },
+  { "id": "loc_004", "place": "WeWork Indiranagar", "arrival": "2026-05-27T09:30:00+05:30", "departure": "2026-05-27T23:10:00+05:30", "category": "work" },
+  { "id": "loc_005", "place": "Home", "arrival": "2026-05-28T00:02:00+05:30", "departure": "2026-05-28T08:25:00+05:30", "category": "home" },
+  { "id": "loc_006", "place": "WeWork Indiranagar", "arrival": "2026-05-28T08:55:00+05:30", "departure": "2026-05-28T22:45:00+05:30", "category": "work" },
+  { "id": "loc_007", "place": "Home", "arrival": "2026-05-28T23:30:00+05:30", "departure": "2026-05-29T08:40:00+05:30", "category": "home" },
+  { "id": "loc_008", "place": "Hackathon Venue", "arrival": "2026-05-29T09:10:00+05:30", "departure": "2026-05-29T19:20:00+05:30", "category": "work" }
+]

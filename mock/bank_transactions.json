@@ -1,0 +1,14 @@
+[
+  { "date": "2026-05-01", "amount": 68000, "category": "rent", "merchant": "Indiranagar Flat", "note": "Monthly rent" },
+  { "date": "2026-05-03", "amount": 840, "category": "groceries", "merchant": "Nature's Basket", "note": "Weekend restock" },
+  { "date": "2026-05-05", "amount": 799, "category": "subscription", "merchant": "Notion", "note": "Team workspace" },
+  { "date": "2026-05-06", "amount": 2499, "category": "gym", "merchant": "Peak Fitness", "note": "Unused for 23 days" },
+  { "date": "2026-05-11", "amount": 612, "category": "food", "merchant": "Swiggy", "note": "Ordered after midnight" },
+  { "date": "2026-05-13", "amount": 3890, "category": "impulse", "merchant": "Amazon", "note": "Noise-cancelling earbuds at 1:43am" },
+  { "date": "2026-05-16", "amount": 420, "category": "food", "merchant": "Swiggy", "note": "Skipped lunch, late dinner" },
+  { "date": "2026-05-20", "amount": 1299, "category": "subscription", "merchant": "Figma", "note": "Pro plan" },
+  { "date": "2026-05-24", "amount": 510, "category": "food", "merchant": "Swiggy", "note": "Third late order this week" },
+  { "date": "2026-05-27", "amount": 2490, "category": "impulse", "merchant": "Blinkit", "note": "Stress snacks and charger at 12:18am" },
+  { "date": "2026-05-28", "amount": 3200, "category": "travel", "merchant": "Uber", "note": "Back-to-back meeting commute" },
+  { "date": "2026-05-29", "amount": 650, "category": "food", "merchant": "Swiggy", "note": "Breakfast and coffee, no groceries left" }
+]

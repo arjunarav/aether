@@ -1,0 +1,74 @@
+[
+  {
+    "id": "wa_001",
+    "contact": "Maya Chen",
+    "message": "Send me the story when you have it. The architecture reveal is the interesting part.",
+    "timestamp": "2026-05-11T22:12:00+05:30",
+    "direction": "inbound",
+    "type": "text"
+  },
+  {
+    "id": "wa_002",
+    "contact": "Mom",
+    "message": "Can you listen to this before tomorrow? Doctor said one thing I didn't understand.",
+    "timestamp": "2026-05-20T18:04:00+05:30",
+    "direction": "inbound",
+    "type": "voice_note"
+  },
+  {
+    "id": "wa_003",
+    "contact": "Mom",
+    "message": "Later",
+    "timestamp": "2026-05-20T18:11:00+05:30",
+    "direction": "outbound",
+    "type": "text"
+  },
+  {
+    "id": "wa_004",
+    "contact": "Vikram Nair",
+    "message": "Proud of how far LabBase went. Happy to be a reference if you need it.",
+    "timestamp": "2026-05-06T10:41:00+05:30",
+    "direction": "inbound",
+    "type": "text"
+  },
+  {
+    "id": "wa_005",
+    "contact": "Amara Rao",
+    "message": "Design review survived. You owe me the dramatic version.",
+    "timestamp": "2026-05-17T21:30:00+05:30",
+    "direction": "inbound",
+    "type": "text"
+  },
+  {
+    "id": "wa_006",
+    "contact": "Founder Friends",
+    "message": "Anyone alive for Sunday breakfast?",
+    "timestamp": "2026-05-24T09:15:00+05:30",
+    "direction": "inbound",
+    "type": "group"
+  },
+  {
+    "id": "wa_007",
+    "contact": "Founder Friends",
+    "message": "can't, shipping",
+    "timestamp": "2026-05-24T10:03:00+05:30",
+    "direction": "outbound",
+    "type": "group"
+  },
+  {
+    "id": "wa_008",
+    "contact": "Mom",
+    "message": "Voice note from cardiology follow-up",
+    "timestamp": "2026-05-20T21:03:00+05:30",
+    "direction": "inbound",
+    "type": "voice_note"
+  },
+  {
+    "id": "wa_009",
+    "contact": "Dev Kapoor",
+    "message": "Console visualizer is ready for whatever query log shape you choose.",
+    "timestamp": "2026-05-28T23:20:00+05:30",
+    "direction": "inbound",
+    "type": "text"
+  }
+]

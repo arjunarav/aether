@@ -1,0 +1,8 @@
+.next/
+.next-stale-dev-cache/
+.next-stale-runtime-*/
+node_modules/
+.pnpm-store/
+.pnpm-debug.log
+.tools/
+.DS_Store

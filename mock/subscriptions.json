@@ -1,0 +1,6 @@
+[
+  { "name": "Notion", "amount": 799, "billing_date": "2026-06-05", "used_last_30d": true },
+  { "name": "Peak Fitness", "amount": 2499, "billing_date": "2026-06-06", "used_last_30d": false },
+  { "name": "Figma", "amount": 1299, "billing_date": "2026-06-20", "used_last_30d": true },
+  { "name": "Meditation App", "amount": 499, "billing_date": "2026-06-02", "used_last_30d": false }
+]
