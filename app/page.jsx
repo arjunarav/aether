@@ -81,6 +81,7 @@ export default function AetherHome() {
   const [consoleEntries, setConsoleEntries] = useState([]);
   const [consoleFilter, setConsoleFilter] = useState('all');
   const [consoleOpen, setConsoleOpen] = useState(false);
+  const [actionFeedback, setActionFeedback] = useState({});
   const [sourcePanel, setSourcePanel] = useState(null);
   const [phase, setPhase] = useState('Connecting to sources...');
   const [readStage, setReadStage] = useState('idle');
@@ -217,6 +218,51 @@ export default function AetherHome() {
   function onModeSelect(nextMode) {
     setMode(nextMode);
     if (nextMode === 'debug') runQuery('Debug my week.', 'debug');
+  }
+
+  async function handleInsightAction(insight, action, index) {
+    const key = `${insight.id || insight.title}-${index}`;
+    setActionFeedback((current) => ({ ...current, [key]: 'working' }));
+
+    const lowered = action.toLowerCase();
+    const actionType = lowered.includes('block') || lowered.includes('window') ? 'calendar_block' : lowered.includes('notion') ? 'task' : 'email';
+
+    try {
+      const draft = await getJson('/api/actions/draft', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action_type: actionType,
+          context: {
+            title: action,
+            contact: insight.title?.includes('Vikram') ? 'Vikram Nair' : insight.title?.includes('Maya') ? 'Maya Chen' : 'Maya',
+            subject: insight.title
+          }
+        })
+      });
+
+      setAskResult((current) => ({
+        ...(current || {}),
+        response: current?.response || `Prepared the next move for ${insight.title}.`,
+        readout: {
+          ...(current?.readout || {}),
+          kicker: current?.readout?.kicker || 'Action prepared',
+          title: current?.readout?.title || insight.title,
+          verdict: current?.readout?.verdict || action,
+          next_move: current?.readout?.next_move || action,
+          draft: {
+            type: draft.action_type === 'calendar_block' ? 'Calendar block' : draft.action_type === 'task' ? 'Task' : 'Message',
+            title: draft.title || draft.subject || action,
+            text: draft.description || draft.body || draft.due || 'Ready to execute.'
+          }
+        },
+        insights,
+        queries_run: current?.queries_run || briefing?.queries_run || []
+      }));
+      setActionFeedback((current) => ({ ...current, [key]: 'done' }));
+    } catch (error) {
+      setActionFeedback((current) => ({ ...current, [key]: 'error' }));
+    }
   }
 
   if (loading || !briefing || !relationships || !regret) {
@@ -442,7 +488,8 @@ export default function AetherHome() {
                 index={index}
                 queries={askResult?.queries_run || briefing.queries_run}
                 setSourcePanel={setSourcePanel}
-                onDraft={() => setQuery(`Draft reply for ${insight.title}`)}
+                actionFeedback={actionFeedback}
+                onAction={handleInsightAction}
               />
             ))}
           </div>
@@ -617,9 +664,10 @@ function AetherAnswer({ result, setSourcePanel }) {
   );
 }
 
-function InsightCard({ insight, queries, setSourcePanel, onDraft }) {
+function InsightCard({ insight, queries, setSourcePanel, actionFeedback, onAction }) {
   const score = insight.score ?? 80;
   const severity = (insight.severity || 'INFO').toLowerCase();
+  const [reasoningOpen, setReasoningOpen] = useState(false);
 
   return (
     <article className={`insight-card severity-${severity}`}>
@@ -639,7 +687,7 @@ function InsightCard({ insight, queries, setSourcePanel, onDraft }) {
       <div className="evidence-list">
         <p className="micro-label">Evidence</p>
         {(insight.evidence || []).map((item) => (
-          <p key={item}>- {item}</p>
+          <p key={item}>{item}</p>
         ))}
       </div>
 
@@ -649,9 +697,17 @@ function InsightCard({ insight, queries, setSourcePanel, onDraft }) {
         <p className="micro-label">Recommended actions</p>
         {(insight.actions || []).map((item, index) => (
           <div key={item} className="action-row">
-            <span>{'->'} {item}</span>
-            <button type="button" onClick={onDraft}>
-              {index === 0 ? 'Do it ->' : 'Draft ->'}
+            <span>{item}</span>
+            <button type="button" onClick={() => onAction(insight, item, index)}>
+              {actionFeedback?.[`${insight.id || insight.title}-${index}`] === 'working'
+                ? 'Working'
+                : actionFeedback?.[`${insight.id || insight.title}-${index}`] === 'done'
+                  ? 'Ready'
+                  : actionFeedback?.[`${insight.id || insight.title}-${index}`] === 'error'
+                    ? 'Retry'
+                    : index === 0
+                      ? 'Do it'
+                      : 'Prepare'}
             </button>
           </div>
         ))}
@@ -664,31 +720,43 @@ function InsightCard({ insight, queries, setSourcePanel, onDraft }) {
         ))}
       </div>
 
-      <ReasoningPanel queries={queries} confidence={insight.confidence} />
+      <ReasoningPanel
+        queries={queries}
+        confidence={insight.confidence}
+        open={reasoningOpen}
+        onToggle={() => setReasoningOpen((value) => !value)}
+      />
     </article>
   );
 }
 
-function ReasoningPanel({ queries, confidence = 0.82 }) {
+function ReasoningPanel({ queries, confidence = 0.82, open, onToggle }) {
   return (
-    <details className="reasoning-panel">
-      <summary>How I figured this out</summary>
-      <div className="reasoning-grid">
-        <div>
-          <p className="micro-label">Confidence</p>
-          <p className="mono">{Math.round(confidence * 100)}%</p>
-        </div>
-        <div>
-          <p className="micro-label">Joins</p>
-          <p>Calendar x Health on date. Contacts x Gmail on email. Goals cross-joined into regret horizon.</p>
+    <div className={`reasoning-panel ${open ? 'open' : ''}`}>
+      <button type="button" className="reasoning-toggle" onClick={onToggle} aria-expanded={open}>
+        <span className="reasoning-caret" aria-hidden="true" />
+        <span>How I figured this out</span>
+      </button>
+      <div className="reasoning-body" aria-hidden={!open}>
+        <div className="reasoning-body-inner">
+          <div className="reasoning-grid">
+            <div>
+              <p className="micro-label">Confidence</p>
+              <p className="mono">{Math.round(confidence * 100)}%</p>
+            </div>
+            <div>
+              <p className="micro-label">Joins</p>
+              <p>Calendar x Health on date. Contacts x Gmail on email. Goals cross-joined into regret horizon.</p>
+            </div>
+          </div>
+          {(queries || []).slice(0, 2).map((query) => (
+            <pre key={query.id} className="sql-block">
+              <code>{highlightSql(query.sql)}</code>
+            </pre>
+          ))}
         </div>
       </div>
-      {(queries || []).slice(0, 2).map((query) => (
-        <pre key={query.id} className="sql-block">
-          <code>{highlightSql(query.sql)}</code>
-        </pre>
-      ))}
-    </details>
+    </div>
   );
 }
 
